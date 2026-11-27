@@ -1,0 +1,42 @@
+Selected model: CNN
+Threshold (from out-of-fold predictions): 0.36
+Validation: 1x repeated 5-fold CV grouped by child.
+
+=== CNN (threshold 0.36) ===
+Clean originals
+   balanced_accuracy: 0.866
+         sensitivity: 0.947
+         specificity: 0.785
+           precision: 0.788
+                  f1: 0.861
+             roc_auc: 0.951
+Photo-style renderings
+   balanced_accuracy: 0.874
+         sensitivity: 0.893
+         specificity: 0.854
+           precision: 0.838
+                  f1: 0.865
+             roc_auc: 0.940
+Confusion matrix (clean originals, out-of-fold)
+[[106  29]
+ [  6 108]]
+
+=== RNN (threshold 0.34) ===
+Clean originals
+   balanced_accuracy: 0.630
+         sensitivity: 0.912
+         specificity: 0.348
+           precision: 0.542
+                  f1: 0.680
+             roc_auc: 0.845
+Photo-style renderings
+   balanced_accuracy: 0.704
+         sensitivity: 0.904
+         specificity: 0.505
+           precision: 0.607
+                  f1: 0.726
+             roc_auc: 0.848
+Confusion matrix (clean originals, out-of-fold)
+[[ 47  88]
+ [ 10 104]]
+

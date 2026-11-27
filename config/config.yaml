@@ -1,0 +1,14 @@
+data:
+  raw_dir: data/raw
+  class_a_dir: potential_dysgraphia
+  class_b_dir: low_potential_dysgraphia
+
+model:
+  random_state: 42
+  test_size: 0.20
+  min_image_width: 300
+  min_image_height: 200
+
+prediction:
+  high_deviation_percentile: 90
+  low_deviation_percentile: 10

@@ -1,0 +1,221 @@
+{
+  "feature_cols": [
+    "ink_ratio",
+    "foreground_bbox_width_ratio",
+    "foreground_bbox_height_ratio",
+    "foreground_aspect_ratio",
+    "connected_component_count",
+    "component_area_mean",
+    "component_area_std",
+    "component_area_cv",
+    "component_width_mean",
+    "component_width_std",
+    "component_height_mean",
+    "component_height_std",
+    "component_aspect_mean",
+    "component_aspect_std",
+    "component_centroid_y_std",
+    "horizontal_projection_mean",
+    "horizontal_projection_std",
+    "vertical_projection_mean",
+    "vertical_projection_std",
+    "row_ink_cv",
+    "col_ink_cv"
+  ],
+  "best_model": "cnn",
+  "best_model_name": "CNN",
+  "decision_threshold": 0.35999999999999965,
+  "models": {
+    "cnn": {
+      "name": "CNN",
+      "description": "Convolutional neural network reading the handwriting as an image",
+      "decision_threshold": 0.35999999999999965,
+      "parameters": 40793,
+      "fold_networks": 5,
+      "cross_validation": {
+        "clean_images": {
+          "balanced_accuracy": 0.8662768031189083,
+          "sensitivity": 0.9473684210526315,
+          "specificity": 0.7851851851851852,
+          "precision": 0.7883211678832117,
+          "f1": 0.8605577689243028,
+          "roc_auc": 0.9510721247563353
+        },
+        "photo_style_images": {
+          "balanced_accuracy": 0.8736176249203867,
+          "sensitivity": 0.8932748538011696,
+          "specificity": 0.8539603960396039,
+          "precision": 0.8381344307270233,
+          "f1": 0.86482661004954,
+          "roc_auc": 0.9396260349719183
+        }
+      }
+    },
+    "rnn": {
+      "name": "RNN",
+      "description": "Bidirectional GRU recurrent network reading the handwriting left-to-right",
+      "decision_threshold": 0.33999999999999964,
+      "parameters": 72145,
+      "fold_networks": 5,
+      "cross_validation": {
+        "clean_images": {
+          "balanced_accuracy": 0.630214424951267,
+          "sensitivity": 0.9122807017543859,
+          "specificity": 0.34814814814814815,
+          "precision": 0.5416666666666666,
+          "f1": 0.6797385620915033,
+          "roc_auc": 0.8454840805717999
+        },
+        "photo_style_images": {
+          "balanced_accuracy": 0.7042296334896647,
+          "sensitivity": 0.9035087719298246,
+          "specificity": 0.504950495049505,
+          "precision": 0.6070726915520629,
+          "f1": 0.7262044653349001,
+          "roc_auc": 0.847522581205489
+        }
+      }
+    }
+  },
+  "reference_distributions": {
+    "ink_ratio": {
+      "p10": 0.04381037488816754,
+      "p50": 0.0731242910387295,
+      "p90": 0.11288591118136569
+    },
+    "foreground_bbox_width_ratio": {
+      "p10": 1.0989610773387368,
+      "p50": 1.3837309571716008,
+      "p90": 2.1367011988358753
+    },
+    "foreground_bbox_height_ratio": {
+      "p10": 2.179175475687104,
+      "p50": 3.048780487804878,
+      "p90": 5.64756097560976
+    },
+    "foreground_aspect_ratio": {
+      "p10": 8.392854122621564,
+      "p50": 11.699521294156488,
+      "p90": 18.82182677761035
+    },
+    "connected_component_count": {
+      "p10": 9.500702958231486,
+      "p50": 12.570162481536189,
+      "p90": 17.21333333333333
+    },
+    "component_area_mean": {
+      "p10": 0.13327732413357435,
+      "p50": 0.1858836206896551,
+      "p90": 0.2600509714121749
+    },
+    "component_area_std": {
+      "p10": 0.09829525549027283,
+      "p50": 0.1456438053143035,
+      "p90": 0.21714055421067482
+    },
+    "component_area_cv": {
+      "p10": 0.6107844582140195,
+      "p50": 0.7708710156232854,
+      "p90": 1.0917110624372077
+    },
+    "component_width_mean": {
+      "p10": 0.4545908268114622,
+      "p50": 0.5663961038961038,
+      "p90": 0.7189365767749037
+    },
+    "component_width_std": {
+      "p10": 0.2799010302604762,
+      "p50": 0.3637473216232553,
+      "p90": 0.5011034039498226
+    },
+    "component_height_mean": {
+      "p10": 0.6871222206068404,
+      "p50": 0.827860696517413,
+      "p90": 0.9483052821001378
+    },
+    "component_height_std": {
+      "p10": 0.3969878902256921,
+      "p50": 0.4956877655810617,
+      "p90": 0.6316120810821523
+    },
+    "component_aspect_mean": {
+      "p10": 0.661495943005302,
+      "p50": 0.8372171433407982,
+      "p90": 1.1235001342709356
+    },
+    "component_aspect_std": {
+      "p10": 0.3638566201075374,
+      "p50": 0.5369490194533936,
+      "p90": 0.8740192445305576
+    },
+    "component_centroid_y_std": {
+      "p10": 0.3260300289164316,
+      "p50": 0.45872097507632,
+      "p90": 1.0155597549183735
+    },
+    "horizontal_projection_mean": {
+      "p10": 0.04358329366690652,
+      "p50": 0.0738177140140392,
+      "p90": 0.11288591118136569
+    },
+    "horizontal_projection_std": {
+      "p10": 0.053686755220922616,
+      "p50": 0.0806828308374476,
+      "p90": 0.10833833828833164
+    },
+    "vertical_projection_mean": {
+      "p10": 0.5055489653176288,
+      "p50": 0.6449511400651465,
+      "p90": 0.7502028320423919
+    },
+    "vertical_projection_std": {
+      "p10": 0.056752857738041805,
+      "p50": 0.0905070414370704,
+      "p90": 0.12299508101779737
+    },
+    "row_ink_cv": {
+      "p10": 0.9251483930426542,
+      "p50": 1.0927876807244346,
+      "p90": 1.4653721133334394
+    },
+    "col_ink_cv": {
+      "p10": 0.9367295331475058,
+      "p50": 1.2124379592348369,
+      "p90": 1.5086739928272304
+    }
+  },
+  "class_names": {
+    "0": "low_potential_dysgraphia",
+    "1": "potential_dysgraphia"
+  },
+  "input": {
+    "canvas_height": 64,
+    "canvas_width": 256,
+    "letter_height_px": 12.0
+  },
+  "cross_validation": {
+    "protocol": "1x repeated 5-fold, grouped by child (no child in train and validation)",
+    "operating_point": "threshold = highest value with >= 90% sensitivity in out-of-fold predictions",
+    "clean_images": {
+      "balanced_accuracy": 0.8662768031189083,
+      "sensitivity": 0.9473684210526315,
+      "specificity": 0.7851851851851852,
+      "precision": 0.7883211678832117,
+      "f1": 0.8605577689243028,
+      "roc_auc": 0.9510721247563353
+    },
+    "photo_style_images": {
+      "balanced_accuracy": 0.8736176249203867,
+      "sensitivity": 0.8932748538011696,
+      "specificity": 0.8539603960396039,
+      "precision": 0.8381344307270233,
+      "f1": 0.86482661004954,
+      "roc_auc": 0.9396260349719183
+    }
+  },
+  "training_counts": {
+    "potential_dysgraphia": 114,
+    "low_potential_dysgraphia": 135
+  },
+  "warning": "Research/screening support only. Not a clinical diagnosis."
+}
